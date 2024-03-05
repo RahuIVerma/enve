@@ -59,7 +59,7 @@ Enter enve directory:
 ```
 cd enve
 ```
-Enter the folder with third party dependencies:
+Enter the folder with third-party dependencies:
 ```
 cd third_party
 ```
@@ -68,7 +68,7 @@ Apply enve-specific library patches (not needed for Windows):
 make patch
 ```
 
-<h1 align="center">Building for Linux</h1>
+<h1 align="center" id="building-for-linux">Building for Linux</h1>
 
 Some of the provided terminal commands are applicable only to Ubuntu 16.04 and 18.04.
 If you are using a different distribution please treat the commands as a general guide.
@@ -165,7 +165,7 @@ cd ..
 ```
 ### Qt
 
-Go to qt.io/download to download Open Source Qt installer.
+Go to qt.io/download to download the Open Source Qt installer.
 Install Qt 5.12.4 Desktop gcc 64-bit.
 
 Install Qt in the directory of your choice (ex. ~/.Qt)
@@ -208,7 +208,7 @@ enve dependencies:
 sudo apt-get install libglib2.0-dev
 ```
 Install libxkbcommon-x11-dev to run QtCreator on Ubuntu 16.04.
-Otherwise it will not execute properly.
+Otherwise, it will not execute properly.
 ```
 sudo apt-get install libxkbcommon-x11-dev
 ```
@@ -238,7 +238,7 @@ qmake CONFIG+=debug ../../enve.pro
 make CC=gcc-7 CPP=g++-7 CXX=g++-7 LD=g++-7
 cd ..
 ```
-Now you have successuly build enve and libenvecore along with all the examples.
+Now you have successfully built enve and libenvecore along with all the examples.
 If you wish to create your own executable proceed to the **Deployment** section.
 
 ## Deploying for Linux
@@ -259,7 +259,7 @@ cp -av Release/src/core/*.so* AppDir/usr/lib/
 ```
 
 #### Support older systems (ex. Ubuntu 16.04)
-Download patched AppRun binary and an associated library that will link a newer version of libstdc++ on older systems:
+Download the patched AppRun binary and an associated library that will link a newer version of libstdc++ on older systems:
 ```
 wget https://github.com/darealshinji/AppImageKit-checkrt/releases/download/continuous/AppRun-patched-x86_64
 mv AppRun-patched-x86_64 AppRun
@@ -284,9 +284,9 @@ Create the AppImage using LinuxDeployQt:
 ./linuxdeployqt-6-x86_64.AppImage AppDir/usr/share/applications/enve.desktop -appimage
 ```
 
-You have successfuly created your own enve AppImage!
+You have successfully created your own enve AppImage!
 
-<h1 align="center">Building for Windows</h1>
+<h1 align="center" id="building-for-windows">Building for Windows</h1>
 
 ### Visual Studio Community 2017
 
@@ -295,23 +295,23 @@ Make sure to install **Desktop development with C++**
 
 ### Qt
 
-Go to qt.io/download to download Open Source Qt installer.
+Go to qt.io/download to download the Open Source Qt installer.
 Install Qt 5.12.4 Desktop MSVC 2017 64-bit.
 
 ### LLVM
 
-Download the latest stable LLVM relese from **https://github.com/llvm/llvm-project/releases**, e.g., **LLVM-10.0.0-win64.exe**.
+Download the latest stable LLVM release from **https://github.com/llvm/llvm-project/releases**, e.g., **LLVM-10.0.0-win64.exe**.
 Install LLVM.
 
 ### Environment
 
 Run all commands from **Qt 5.12.4 (MSVC 2017 64-bit)** command line.
-Remeber to call vcvarsall.bat to initialize MSVC environment, e.g.,
+Remember to call vcvarsall.bat to initialize MSVC environment, e.g.,
 `"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat" x64`.
 
 ### FFmpeg and Libmypaint
 
-Use batch script to download prebuilt libraries:
+Use the batch script to download prebuilt libraries:
 ```
 cd third_party
 win.bat
@@ -370,7 +370,7 @@ qmake enve.pro -spec win32-clang-msvc -config release
 nmake
 ```
 
-<h1 align="center">Building for macOS</h1>
+<h1 align="center" id="building-for-macos">Building for macOS</h1>
 
 Install build dependencies for third-party libraries from Homebrew.
 ```sh
